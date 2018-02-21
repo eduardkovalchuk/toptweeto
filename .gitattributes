@@ -1,0 +1,7 @@
+# Clear trailing whitespaces
+*.py filter=trimWhitespace
+
+# Then configure filter in local repo:
+# ~$ git config filter.trimWhitespace.clean trim_whitespace  
+
+# Every time before you will push *.py files go through trimWhitespace filter.
