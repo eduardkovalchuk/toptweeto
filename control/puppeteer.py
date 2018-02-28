@@ -1,0 +1,2 @@
+class Puppeteer(object):
+    pass
