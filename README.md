@@ -1,3 +1,7 @@
 # toptweet
 Toptweet is an application that allows you to get most popular tweets on Twitter.com
-line \n break
+
+
+| Method   | Endpoint             | Request body | Response Body                                                          |
+| -------- | -------------------- | ------------ | ---------------------------------------------------------------------- |
+| GET      | api/jira/init_oauth/ | ```{}```     | ```{ "request_token_key": "TOKEN_KEY", "authorization_url": "URL" }``` |
