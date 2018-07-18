@@ -9,24 +9,24 @@ $ docker-compose up
 
 ## Login client with JIRA via OAuth1
 
-0. Initialization of flow:
+1. Initialization of flow:
 
 | Method   | Endpoint             | Request body | Response Body                                                                |
 | :------: | :------------------: | :----------: | :--------------------------------------------------------------------------: |
 | POST     | api/jira/init_oauth/ | ```{}```     | ```{ "request_token_key": "TOKEN_KEY_VALUE", "authorization_url": "URL" }``` |
 
-0. Redirect user to retreived **authorization_url**
-0. User logins to jira
-0. Jira redirects user to frontend
-0. With retreived **request_token_key** (from step 1) make request 
+2. Redirect user to retreived **authorization_url**
+3. User logins to jira
+4. Jira redirects user to frontend
+5. Make request with retreived **request_token_key** (from step 1) to get access_token
 
 | Method   | Endpoint               | Request body                                     | Response Body                                   |
 | :------: | :--------------------: | :----------------------------------------------: | :---------------------------------------------: |
 | POST     | api/jira/access_token/ | ```{ "request_token_key": "TOKEN_KEY_VALUE" }``` | ```{ "access_token_key": "TOKEN_KEY_VALUE" }``` |
 
-0. Set header 'Jira-Authorization' with value of *access_token_key*
+7. Set header 'Jira-Authorization' with value of *access_token_key*
 
-0. Make export request to export section or project
+8. Make export request to export section or project
 
 > before exporting you have to provide *jira_base_url* for **account** AND *jira_key* for **project**
 
